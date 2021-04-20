@@ -187,6 +187,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-end;
+    animation: qrcode-in .5s linear;
 }
 
 .middle-brand img {
