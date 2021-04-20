@@ -1,0 +1,372 @@
+/* 头部样式开始 */
+.header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.header-container {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    height: 100%;
+}
+
+.logo img {
+    display: inline-block;
+    width: 222px;
+    height: 34px;
+}
+
+.header-right {
+    float: right;
+    padding-right: 20px;
+    height: 100%;
+    color: #999;
+}
+/* 头部样式结束 */
+
+/* 中部样式开始 */
+.middle {
+    width: 100%;
+    min-height: 694px;
+    background: #00b38a;
+    background-image: url(../images/middle-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto 112px;
+}
+
+.middle-container {
+    width: 1000px;
+    margin: 70px auto;
+}
+
+.middle-left {
+    float: left;
+    width: 610px;
+    height: 470px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 13px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.search .icon-search {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    color: #b3b3b3;
+    font-size: 22px;
+    transform: translateY(-60%);
+}
+
+.search input {
+    width: 100%;
+    height: 100%;
+    padding: 0 125px 0 40px;
+    color: #757575;
+    font-size: 16px;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+}
+
+.search-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 112px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #50b08c;
+    border-radius: 2px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #3f8f71;
+}
+
+.search-bottom {
+    position: relative;
+    width: 100%;
+    height: 412px;
+}
+
+.middle-nav {
+    float: left;
+    width: 100px;
+    height: 100%;
+    padding: 4px;
+    background-color: #408e71;
+    border-radius: 4px;
+}
+
+.middle-nav ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-nav ul li {
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.middle-nav .selected {
+    color: #367b64;
+    background-color: #9fc7b8;
+}
+
+.middle-brand {
+    display: none;
+    float: right;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 488px;
+    height: 420px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.middle-brand img {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* .middle-brand img:hover {
+    opacity: 1;
+} */
+
+/* 左右摆动动画 */
+@keyframes rock {
+    0% {
+        transform: rotate(6deg);
+    }
+    25% {
+        transform: rotate(-6deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.middle-right {
+    float: right;
+    width: 360px;
+    height: 470px;
+    padding: 57px 50px 35px 50px;
+    text-align: center;
+    background-color: #fff;
+    animation: rock .5s 0s linear;
+}
+
+.login-title {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    background-color: #c2c2c1;
+    transform: translateX(-50%);
+}
+
+.login-title span:first-child {
+    color: #129663;
+}
+
+.middle-right ul li {
+    position: relative;
+}
+
+.area-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.phone input {
+    width: 100%;
+    height: 40px;
+    padding-left: 70px;
+    color: #999;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.icon-chevron-down {
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+}
+
+.verification-code input {
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    color: #999;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.getCode {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: #50b08c;
+    font-size: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.getCode:hover {
+    color: #0e744d;
+}
+
+.register-button {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 0 15px 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    background-color: #51b48e;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #3f8e71;
+}
+
+.resiter-protocol {
+    color: #999;
+}
+
+.resiter-protocol a {
+    color: #62b898;
+}
+
+.login-btn {
+    margin-top: 50px;
+}
+
+.login-btn a {
+    color: #50b08c;
+    text-decoration: underline;
+}
+/* 中部样式结束 */
+
+/* 底部开始 */
+.footer {
+    width: 100%;
+    background-color: #fff;
+}
+
+.footer-container {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.footer-top {
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d6dadf;
+}
+
+.footer-top ul {
+    display: flex;
+}
+
+.footer-top ul li {
+    flex: 1;
+}
+
+.footer-top img {
+    float: left;
+    width: 43px;
+    height: 43px;
+    margin-right: 15px;
+}
+
+.footer-top .title {
+    font-size: 18px;
+}
+
+.footer-top .content {
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    width: 100%;
+    padding-top: 25px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-bottom img {
+    display: inline-block;
+    width: 173px;
+    height: 17px;
+    margin-bottom: 10px;
+}
+/* 底部结束 */
