@@ -1,4 +1,16 @@
 window.addEventListener("load", function () {
+    let header_right = document.querySelector(".header-right");
+
+    let qrcode_app = document.querySelector(".qrcode-app");
+
+    header_right.addEventListener("mouseenter", function () {
+        qrcode_app.style.display = "block";
+    });
+
+    header_right.addEventListener("mouseleave", function () {
+        qrcode_app.style.display = "none";
+    });
+
     let middle_nav_ul = document.querySelector(".middle-nav ul");
 
     let middle_nav_lis = document.querySelectorAll(".middle-nav ul li");
@@ -56,7 +68,8 @@ window.addEventListener("load", function () {
             for (let i = 0; i < middle_brands.length; i++) {
                 middle_brands[i].style.display = "none";
             }
-            middle_brands[e.target.getAttribute("index")].style.display = "flex";
+            middle_brands[e.target.getAttribute("index")].style.display =
+                "flex";
         }
     });
 });

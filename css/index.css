@@ -6,13 +6,15 @@
 }
 
 .header-container {
+    display: flex;
+    position: relative;
     width: 1000px;
     height: 100%;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
 .logo {
-    float: left;
     height: 100%;
 }
 
@@ -23,10 +25,42 @@
 }
 
 .header-right {
-    float: right;
     padding-right: 20px;
-    height: 100%;
     color: #999;
+    text-align: right;
+    font-size: 14px;
+}
+
+.qrcode-app {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 128px;
+    height: 128px;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 0 5px hsl(0deg 0% 80% / 60%);
+    background-color: #fff;
+    animation: qrcode-in 0.4s linear;
+}
+
+@keyframes qrcode-in {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /* 头部样式结束 */
 
@@ -193,7 +227,7 @@
     padding: 57px 50px 35px 50px;
     text-align: center;
     background-color: #fff;
-    animation: rock .5s 0s linear;
+    animation: rock 0.5s 0s linear;
 }
 
 .login-title {
